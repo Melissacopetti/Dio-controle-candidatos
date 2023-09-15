@@ -16,11 +16,11 @@ Analisar Candidato: Foi criado o método analisarCandidato, que avalia se a pret
 Se o salário pretendido for maior que R$ 2000: "LIGAR PARA O CANDIDATO".
 Se o salário pretendido for igual a R$ 2000: "LIGAR PARA O CANDIDATO COM CONTRA-PROPOSTA".
 Se o salário pretendido for menor que R$ 2000: "AGUARDAR O RESULTADO DOS DEMAIS CANDIDATOS".
-Selecionar Candidatos: O projeto seleciona automaticamente 5 candidatos a partir de uma lista de 10 candidatos com base em suas pretensões salariais. Isso é feito usando o método selecaoCandidatos, que usa a classe ThreadLocalRandom para gerar valores de pretensões salariais aleatórios.
+Selecionar Candidatos: O projeto seleciona automaticamente 5 candidatos a partir de uma lista de 10 candidatos com base em suas pretensões salariais. Isso é feito usando o método selecaoCandidatos, que usa a classe _ThreadLocalRandom_ para gerar valores de pretensões salariais aleatórios.
 
-Impressão dos Candidatos Selecionados: Os candidatos selecionados são impressos no console, exibindo o índice do candidato (+1) e seu nome, tanto usando um loop for quanto um loop for each.
+Impressão dos Candidatos Selecionados: Os candidatos selecionados são impressos no console, exibindo o índice do candidato (+1) e seu nome, tanto usando um loop *for* quanto um loop *for each*.
 
-Ligar para os Candidatos: Para demonstrar o uso do do-while, o projeto simula a ação de ligar para os candidatos selecionados, com um limite máximo de três tentativas.
+Ligar para os Candidatos: Para demonstrar o uso do *do-while*, o projeto simula a ação de ligar para os candidatos selecionados, com um limite máximo de três tentativas.
 </p>
 
 ### Como Executar
@@ -28,7 +28,7 @@ Para executar este projeto, você pode seguir os seguintes passos:
 
 * Clone este repositório em seu ambiente local:
 
-```git clone https://github.com/seu-usuario/Dio-controle-candidatos.git ```
+```git clone https://github.com/Melissacopetti/Dio-controle-candidatos.git ```
 
 * Abra o projeto na sua IDE Eclipse.
 
@@ -57,4 +57,4 @@ Crie um Pull Request para este repositório com uma descrição clara das suas a
 
 <h4 align="justify">
 Este projeto é parte do Santander Bootcamp 2023 - Backend Java da Dio, e tem como objetivo consolidar os conhecimentos adquiridos no módulo "Conhecendo a Linguagem de Programação Java".</h4>
-<h4 align="justify">
+</h4>
