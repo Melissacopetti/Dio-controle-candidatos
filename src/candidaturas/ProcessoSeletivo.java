@@ -1,5 +1,6 @@
 package candidaturas;
 
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ProcessoSeletivo {
@@ -9,9 +10,38 @@ public class ProcessoSeletivo {
 		imprimirSelecionados();
 		selecaoCandidatos();
 
+		String[] candidatos = { "FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUSTO" };
+		for (String candidato : candidatos) {
+			entrandoEmContato(candidato);
+		}
+
 	}
 
-	public static void imprimirSelecionados() {
+	static void entrandoEmContato(String candidato) {
+		int tentativasRealizadas = 1;
+		boolean continuarTentando = true;
+		boolean atendeu = false;
+		do {
+			atendeu = atender();
+			continuarTentando = !atendeu;
+			if (continuarTentando)
+				tentativasRealizadas++;
+			else
+				System.out.println("CONTATO REALIZADO COM SUCESSO!");
+		} while (continuarTentando && tentativasRealizadas < 3);
+
+		if (atendeu)
+			System.out.println("CONSEGUIMOS CONTATO COM " + candidato + " NA " + tentativasRealizadas + " TENTATIVA.");
+		else
+			System.out.println("NAO CONSEGUIMOS CONTATO COM " + candidato + " COM O TOTAL DE " + tentativasRealizadas
+					+ " TENTATIVAS REALIZADAS.");
+	}
+
+	static boolean atender() {
+		return new Random().nextInt(3) == 1;
+	}
+
+	static void imprimirSelecionados() {
 		String[] candidatos = { "FELIPE", "MARCIA", "JULIA", "PAULO", "AUGUSTO" };
 		System.out.println("Imprimindo a lista de candidatos e informando o indice do elemento.");
 		for (int indice = 0; indice < candidatos.length; indice++)
